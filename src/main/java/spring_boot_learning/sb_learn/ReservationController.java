@@ -73,5 +73,15 @@ public class ReservationController {
 
     }
 
+    @PutMapping("/{id}/approve")
+    public ResponseEntity<Reservation> approveReservation(
+            @PathVariable("id") long id
+            ){
+        log.info("Called approveReservation: id={}", id);
+        var reservation = reservationService.approveReservation(id);
+        return ResponseEntity.ok(reservation);
+
+    }
+
 
 }
