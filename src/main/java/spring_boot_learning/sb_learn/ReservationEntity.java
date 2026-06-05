@@ -12,16 +12,16 @@ public class ReservationEntity {
 @Column (name = "id")
 @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column (name = "user_Id")
+    @Column (name = "user_Id", nullable = false)
     private Long userId;
-    @Column (name = "room_Id")
+    @Column (name = "room_Id", nullable = false)
     private Long roomId;
-    @Column (name = "start_Date")
+    @Column (name = "start_Date", nullable = false)
     private LocalDate startDate;
-    @Column (name = "end_Date")
+    @Column (name = "end_Date", nullable = false)
     private LocalDate endDate;
     @Enumerated(EnumType.STRING)
-    @Column (name = "status")
+    @Column (name = "status", nullable = false)
     private ReservationStatus status;
 
 
